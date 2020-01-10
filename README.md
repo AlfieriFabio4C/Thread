@@ -26,7 +26,20 @@ usa System.out.println(Inc1000.count); che lo restituirà in output.
 
 La variabile count è una variabile di classe, e quindi si crea appena viene creata la 
 classe quindi si fa riferimento nel main con nomeClasse.variabileOggetto.
-
-
 Il main essendo static non si può far riferimento alla variabile count a meno che 
 anch'essa non sia static.
+
+
+Il valore della variabile count sarà 0 poichè il main è un thread, e essendo indipendente, 
+la cpu dà priorità al main.
+Per risolvere questo problema si utilizza il metodo join, che unisce gli altri due thread al main, 
+che li farà terminare. Si riscontrerà un altro problema, un conflitto tra thread. 
+La variabile contatore count aumenta di 1 ogni volta che viene dato il controllo della cpu ad un thread,
+ma qualche volta può capitare che un thread non fa aumentare di 1 il contatore nel tempo dato dalla cpu,
+che a sua volta fa passare il controllo all'altro thread e si perde di conseguenza un incremento,
+quindi count non arriverà mai a 2000.
+
+
+Per eliminare quest'ultimo problema si crea un metodo inc1() utilizzando la parola chiave synchronize
+
+
