@@ -3,13 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package eserciziothread;
+package CiaoHiHello;
 
 /**
  *
  * @author fabio.alfieri
  */
-public class EsercizioThread {
+public class CiaoHiHello {
 
     /**
      * @param args the command line arguments
