@@ -26,8 +26,6 @@ usa System.out.println(Inc1000.count); che lo restituirà in output.
 
 La variabile count è una variabile di classe, e quindi si crea appena viene creata la 
 classe quindi si fa riferimento nel main con nomeClasse.variabileOggetto.
-Il main essendo static non si può far riferimento alla variabile count a meno che 
-anch'essa non sia static.
 
 
 Il valore della variabile count sarà 0 poichè il main è un thread, e essendo indipendente, 
