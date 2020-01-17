@@ -19,8 +19,10 @@ public class CiaoHiHello {
 
         Hi a = new Hi();
         Hello b = new Hello();
+        Say c = new Say();
         a.start();
         b.start();
+        c.start();
     }
 
 }
