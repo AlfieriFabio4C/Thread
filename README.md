@@ -40,6 +40,6 @@ che a sua volta fa passare il controllo all'altro thread e si perde di conseguen
 quindi count non arriverà mai a 2000.
 
 
-Per eliminare quest'ultimo problema si crea un metodo inc1() utilizzando la parola chiave synchronize
+Per eliminare quest'ultimo problema si crea un metodo inc1() utilizzando la parola chiave synchronize che semplicemente fa sì che i due thread siano sincronizzati nelle loro azioni. E il risultato finale sarà 2000.
 
 
